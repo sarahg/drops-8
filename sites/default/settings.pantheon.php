@@ -88,6 +88,7 @@ else {
  */
 if (
   isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+  ($_ENV['PANTHEON_ENVIRONMENT'] !== 'live') &&
   !$is_installer_url &&
   (isset($_SERVER['PANTHEON_DATABASE_STATE']) && ($_SERVER['PANTHEON_DATABASE_STATE'] == 'empty')) &&
   (empty($GLOBALS['install_state'])) &&
